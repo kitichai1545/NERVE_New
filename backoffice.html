@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Back Office</title>
+    <link rel="stylesheet" href="backoffice.css">
+</head>
+
+<body>
+    <div class="back-office-container">
+        <!-- Sidebar Menu -->
+        <nav class="sidebar">
+            <img id="logo" src="Group.png" alt="Logo" style="width: 80px; height: auto;">
+            <ul class="sidebar-menu">
+                <li><a href="#popup-data-management" class="menu-item"><i class="icon">📝</i> Popup Data</a></li>
+                <li><a href="#digital-marketing-section" class="menu-item"><i class="icon">📊</i> Digital Marketing</a></li>
+                <li><a href="#multimedia-section" class="menu-item"><i class="icon">🎥</i> Multimedia Production</a></li>
+                <li><a href="#creative-business-section" class="menu-item"><i class="icon">📄</i> Creative Business DEV</a></li>
+                <li><a href="#blogs-section" class="menu-item"><i class="icon">✏️</i> Blogs</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+
+            <!-- Nerve Section -->
+            <section id="nerve-section" class="content-section">
+                <h2>NERVE</h2>
+                <label>Background Video:</label>
+                <input type="file" id="nerve-background-video" accept="video/*" onchange="previewVideo('nerve')">
+                <video id="nerve-video-preview" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="nerve-background-image" accept="image/*" onchange="previewImage('nerve')">
+                <img id="nerve-image-preview" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="nerve-button-text" placeholder="Edit button text here...">
+
+                <label>Content 1:</label>
+                <textarea id="nerve-content-1" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <label>Content 2:</label>
+                <textarea id="nerve-content-2" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+
+
+                <h2>Digital Marketing</h2>
+                <label>Background Video:</label>
+                <input type="file" id="digital-marketing-background-video1" accept="video/*" onchange="previewVideo('digital-marketing')">
+                <video id="digital-marketing-video-preview1" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="digital-marketing-background-image1" accept="image/*" onchange="previewImage('digital-marketing')">
+                <img id="digital-marketing-image-preview1" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="digital-button-text" placeholder="Edit button text here...">
+
+                <label>Content 1:</label>
+                <textarea id="digital-content-1" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <label>Content 2:</label>
+                <textarea id="digital-content-2" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                
+
+                <h2>Multimedia Production</h2>
+                <label>Background Video:</label>
+                <input type="file" id="multimedia-production-background-video1" accept="video/*" onchange="previewVideo('multimedia-production')">
+                <video id="multimedia-production-video-preview1" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="multimedia-production-background-image1" accept="image/*" onchange="previewImage('multimedia-production')">
+                <img id="multimedia-production-image-preview1" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="multimedia-button-text" placeholder="Edit button text here...">
+
+                <label>Content:</label>
+                <textarea id="multimedia-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+
+
+                <h2>Creative Business DEV</h2>
+                <label>Background Video:</label>
+                <input type="file" id="creative-business-dev-background-video1" accept="video/*" onchange="previewVideo('creative-business-dev')">
+                <video id="creative-business-dev-video-preview1" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="creative-business-dev-background-image1" accept="image/*" onchange="previewImage('creative-business-dev')">
+                <img id="creative-business-dev-image-preview1" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="creative-business-button-text" placeholder="Edit button text here...">
+
+                <label>Content:</label>
+                <textarea id="creative-business-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+
+
+                <h2>Blogs</h2>
+                <button id="add-new-blog1" onclick="addBlog()">Add New Blog</button>
+                <div id="blog-list1">
+                    <!-- ตัวอย่าง Blog -->
+                    <div class="blog-item" id="blog-1">
+                        <h3>Blog 1</h3>
+                        <label>Blog Name (for Admin use):</label>
+                        <input type="text" id="blog1-label" placeholder="Enter blog name here for admin use">
+            
+                        <label>Blog Image:</label>
+                        <input type="file" id="blog1-background-image1" accept="image/*" onchange="previewImage('blog1')">
+                        <img id="blog1-image-preview1" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+                        
+                        <label>Blog Title:</label>
+                        <input type="text" id="blog1-title" placeholder="Enter blog title here...">
+            
+                        <label>Content:</label>
+                        <textarea id="blog1-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+                        
+                        <button onclick="saveBlog(1)">Save</button>
+                        <button onclick="deleteBlog(1)">Delete</button>
+                        
+            </section>
+
+            <!-- Digital Marketing Section -->
+            <section id="digital-marketing-section" class="content-section2">
+                <h2>Digital Marketing</h2>
+                <label>Background Video:</label>
+                <input type="file" id="digital-marketing-background-video" accept="video/*" onchange="previewVideo('digital-marketing')">
+                <video id="digital-marketing-video-preview" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="digital-marketing-background-image" accept="image/*" onchange="previewImage('digital-marketing')">
+                <img id="digital-marketing-image-preview" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="digital-button-text" placeholder="Edit button text here...">
+
+                <label>Content 1:</label>
+                <textarea id="digital-content-1" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <label>Content 2:</label>
+                <textarea id="digital-content-2" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <button onclick="saveDigitalMarketingContent()">Save Content</button>
+            </section>
+
+            <!-- Multimedia Production Section -->
+            <section id="multimedia-section" class="content-section2">
+                <h2>Multimedia Production</h2>
+                <label>Background Video:</label>
+                <input type="file" id="multimedia-production-background-video" accept="video/*" onchange="previewVideo('multimedia-production')">
+                <video id="multimedia-production-video-preview" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="multimedia-production-background-image" accept="image/*" onchange="previewImage('multimedia-production')">
+                <img id="multimedia-production-image-preview" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="multimedia-button-text" placeholder="Edit button text here...">
+
+                <label>Content:</label>
+                <textarea id="multimedia-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <button onclick="saveMultimediaContent()">Save Content</button>
+            </section>
+
+            <!-- Creative Business DEV Section -->
+            <section id="creative-business-section" class="content-section2">
+                <h2>Creative Business DEV</h2>
+                <label>Background Video:</label>
+                <input type="file" id="creative-business-dev-background-video" accept="video/*" onchange="previewVideo('creative-business-dev')">
+                <video id="creative-business-dev-video-preview" controls style="display: none; width: 100%; max-width: 500px; margin-top: 10px;"></video>
+
+                <label>Background Image:</label>
+                <input type="file" id="creative-business-dev-background-image" accept="image/*" onchange="previewImage('creative-business-dev')">
+                <img id="creative-business-dev-image-preview" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+
+                <label>Button Text:</label>
+                <input type="text" id="creative-business-button-text" placeholder="Edit button text here...">
+
+                <label>Content:</label>
+                <textarea id="creative-business-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+
+                <button onclick="saveCreativeBusinessContent()">Save Content</button>
+            </section>
+
+            <!-- Blogs Section -->
+            <section id="blogs-section" class="content-section2">
+                <h2>Blogs</h2>
+                <button id="add-new-blog" onclick="addBlog()">Add New Blog</button>
+                <div id="blog-list">
+                    <!-- ตัวอย่าง Blog -->
+                    <div class="blog-item" id="blog-1">
+                        <h3>Blog 1</h3>
+                        <label>Blog Name (for Admin use):</label>
+                        <input type="text" id="blog1-label" placeholder="Enter blog name here for admin use">
+            
+                        <label>Blog Image:</label>
+                        <input type="file" id="blog1-background-image" accept="image/*" onchange="previewImage('blog1')">
+                        <img id="blog1-image-preview" style="display: none; width: 100%; max-width: 500px; margin-top: 10px;" alt="Image Preview">
+                        
+                        <label>Blog Title:</label>
+                        <input type="text" id="blog1-title" placeholder="Enter blog title here...">
+            
+                        <label>Content:</label>
+                        <textarea id="blog1-content" rows="5" cols="50" placeholder="Edit content here..."></textarea>
+                        
+                        <button onclick="saveBlog(1)">Save</button>
+                        <button onclick="deleteBlog(1)">Delete</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popup Data Management Section -->
+            <section id="popup-data-management" class="content-section full-width-section">
+                <h2>Popup Data Management</h2>
+                <table class="popup-data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>URL</th>
+                            <th>Phone</th>
+                            <th>Budget</th>
+                            <th>Serve</th>
+                            <th>Submission Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be inserted here via JavaScript -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <script src="backoffice.js"></script>
+    </body>
+</html>

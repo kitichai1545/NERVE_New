@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <div id="login-form" class="login-container">
+        <img src="Group.png" alt="Logo" style="width: 120px; height: auto;">
+        
+        <form id="form" class="login-form">
+            <label for="username" class="login-label">Username:</label>
+            <input type="text" id="username" name="username" class="login-input" required>
+
+            <label for="password" class="login-label">Password:</label>
+            <input type="password" id="password" name="password" class="login-input" required>
+
+            <button type="button" onclick="login()" class="login-button">Login</button>
+        </form>
+        <p id="message" class="login-message"></p>
+    </div>
+
+    <!-- นำเข้าเฉพาะ LN.js ที่มีฟังก์ชัน login -->
+    <script src="LN.js"></script>
+</body>
+</html>

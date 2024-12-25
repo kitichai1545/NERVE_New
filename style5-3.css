@@ -1,0 +1,1559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    overflow-x: hidden
+}
+
+/* Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px); /* เริ่มจากตำแหน่งที่ต่ำกว่าปกติ */
+  transition: opacity 1s ease-out, transform 1s ease-out; /* ปรับความเร็วของการเลื่อนและความโปร่งใส */
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0); /* เลื่อนกลับมาตำแหน่งปกติ */
+}
+
+#toggle-link img {
+  filter: brightness(0) invert(1); /* เปลี่ยนสีของรูปภาพเป็นสีขาว */
+}
+
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 0.5rem; /* เพิ่ม padding เพื่อเว้นช่องสำหรับ nav */
+}
+
+nav {
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6); /* สีดำที่มีความโปร่งใส 50% */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  border-radius: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-con {
+  display: flex;
+  align-items: center;
+  padding-right: 0px; /* ลดให้ไม่มี padding ซ้ายเลย */
+  margin-left: 0px; /* เพิ่ม margin-left แทนหากต้องการ */
+}
+
+
+.logo {
+  margin-right: 2rem; /* ลดระยะห่างโลโก้ */
+}
+
+.menu {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px; /* ระยะห่างระหว่างแต่ละเมนูและไอคอน */
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+}
+
+.menu li a {
+  display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu li a img {
+  width: 24px; /* ปรับขนาดไอคอนตามที่ต้องการ */
+  margin-right: 5px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+  
+  
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Kanit', sans-serif;
+}
+
+.seo-article {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  margin-top: 80px;
+  clear: both;
+  position: relative;
+  z-index: 10; /* กำหนดให้ปุ่มอยู่ด้านบนสุด */
+}
+
+.back-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.seo-main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-content {
+    text-align: left;
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article-content p {
+    font-weight: 400;
+}
+
+
+
+.article-content h1 {
+  font-size: 2.5rem !important;
+  margin: 0;
+  color: #fff;
+  white-space: nowrap; /* ป้องกันไม่ให้ h1 ขึ้นบรรทัดใหม่ */
+  flex: 1; /* ให้ h1 ขยายเพื่อดัน .share-icon ไปชิดขวา */
+}
+
+.share-icon {
+  position: relative;
+}
+
+.main-share-icon {
+  cursor: pointer;
+}
+
+.share-icons-hidden {
+  display: none; /* ซ่อนโดยค่าเริ่มต้น */
+  position: absolute;
+  top: 100%; /* วางไอคอนย่อยให้ลงมาใต้ไอคอนหลัก */
+  left: 0;
+  background: #333;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.share-icons-hidden a {
+  display: inline-block;
+  margin: 5px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.article-body {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+
+  /** หน้า 6 การ์ด */
+.container6 {
+  background-color: #000;
+  height: 100vh;
+  /* ให้ความสูงเต็มหน้าจอ */
+  padding-top: 50px;
+  /* เว้นระยะห่างจากขอบบน 50px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.view-all-btn {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero6-con {
+  display: flex;
+  justify-content: flex-start; /* เรียงการ์ดจากซ้ายไปขวา */
+  gap: 35px;
+  width: 100%;
+  max-width: 1200px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  background-color: transparent;
+    border: 1px solid #808080;
+    color: #fff;
+    flex: 0 0 342px;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none;
+    text-decoration: none;
+    position: relative;
+    min-height: 530px; /* ความสูงขั้นต่ำของการ์ด */
+    height: 530px; /* กำหนดความสูงให้เท่ากัน */
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  display: block;
+  background-color: #e6007e;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* จัดสไลด์ */
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel-items {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ลูกศร */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.left-arrow {
+  position: absolute;
+    top: 50%;
+    left: -100px; /* ขยับปุ่มลูกศรซ้ายให้อยู่นอกกรอบการ์ด */
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.right-arrow {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    right: -100px;
+}
+
+/* ปุ่ม 3 ปุ่มข้างล่าง */
+.carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+  /* ปรับตำแหน่งให้อยู่นอกกรอบการ์ด */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 5px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.imgarrow-right {
+  position: absolute;
+  right: 20px; /* ระยะห่างจากขอบขวา */
+  bottom: 10px; /* ระยะห่างจากขอบล่าง */
+  width: 25px; /* ขนาดของลูกศร */
+  height: auto;
+}
+
+
+  
+
+
+  /** หน้า 5 */
+.blog5 {
+  position: relative;
+  background-color: #000;
+}
+
+.blog5-text {
+  font-family: 'Kanit', sans-serif;
+  height: 100vh;
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+.img-container {
+  display: flex;
+  gap: 20px;
+  width: max-content; /* ปรับให้ขนาดของคอนเทนเนอร์ยืดตามจำนวนรูปภาพ */
+}
+
+.img-container img {
+  width: 280px; /* ปรับขนาดให้ใหญ่ขึ้น */
+  height: 180px; /* ปรับขนาดความสูงให้ใหญ่ขึ้น */
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.img-top {
+  top: 0;
+}
+
+.img-bottom {
+  bottom: 0;
+}
+
+/* หยุดแอนิเมชันเมื่อวางเมาส์ */
+.img-container.paused {
+  animation-play-state: paused;
+}
+
+
+
+  
+/** footer */
+.footer {
+  background-color: #000;
+  /* พื้นหลังสีดำ */
+  padding-top: 120px;
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #fff;
+  /* สีตัวอักษรเป็นสีขาว */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  /* กระจายคอลัมน์ให้ห่างกัน */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* ทำให้ตอบสนองต่อหน้าจอขนาดเล็กได้ */
+}
+
+.footer .map-container,
+.footer .mail-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* เพิ่มระยะห่างเล็กน้อยระหว่างบรรทัด */
+}
+
+.footer .map-container img,
+.footer .mail-container img {
+  margin-right: 10px;
+  /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  width: 20px;
+  /* ขนาดของไอคอน */
+  height: auto;
+}
+
+.footer .mail-container a,
+.footer .map-container p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .mail-container a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  margin-right: 10px;
+}
+
+.footer .social-icons img {
+  width: 24px;
+  height: auto;
+}
+
+.footer-column1 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  text-align: left;
+}
+
+.footer-column1 h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column1 p{
+  text-align: justify;
+}
+.footer-column1 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column1 a:hover {
+  text-decoration: underline;
+}
+
+
+
+.footer-column2 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  padding-left: 150px;
+}
+
+.footer-column2 h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column2 p,
+.footer-column2 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column2 a:hover {
+  text-decoration: underline;
+}
+
+
+
+.footer-column3 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  text-align: left;
+}
+
+.footer-column3 h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column3 p,
+.footer-column3 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column3 a:hover {
+  text-decoration: underline;
+}
+
+.cta-btn {
+  background-color: #e6007e;
+  /* สีปุ่มเป็นสีชมพู */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+}
+
+.cta-btn:hover {
+  background-color: #d4006f;
+  /* เปลี่ยนสีเมื่อ hover */
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+
+
+
+/* Popup */
+.popup {
+  color: #fff;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #000;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 15px;
+  /* เพิ่มความโค้งให้กรอบ */
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.popup-content button {
+  background-color: #DF00B1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  /* ให้ปุ่มกินพื้นที่ container */
+  max-width: 300px;
+  /* ขนาดสูงสุดของปุ่ม */
+  margin-bottom: 15px;
+}
+
+.popup-content textarea {
+  width: 100%;
+  /* ให้ textarea กินพื้นที่เต็ม */
+  height: 40px;
+  /* กำหนดความสูงให้เหมือนกับ input */
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  /* เพิ่มความโค้งให้เหมือนกับ input */
+  box-sizing: border-box;
+  resize: none;
+  /* ปิดการยืดหดของ textarea */
+  font-size: 16px;
+  /* ปรับขนาดตัวอักษร */
+  background-color: #f9f9f9;
+  /* สีพื้นหลังเหมือนกับ input */
+  color: #333;
+  /* สีตัวอักษรเหมือนกับ input */
+  overflow: hidden;
+  /* ปิดการแสดง scroll bar */
+}
+
+.service-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px; /* เพิ่มช่องว่างระหว่าง label กับ checkbox */
+  font-size: 18px;
+  color: #fff; /* หรือสีอื่นที่คุณต้องการ */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column; /* จัดวางเนื้อหาภายใน form-group ให้เป็นแนวตั้ง */
+  align-items: flex-start; /* จัดข้อความและ checkbox ให้อยู่ซ้าย */
+}
+
+.form-group .form-field {
+  flex: 0 0 48%;
+  /* กำหนดให้แต่ละฟอร์มกินพื้นที่ 48% เพื่อให้มีระยะห่างระหว่างฟอร์ม */
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+}
+
+.form-group input,
+.form-group textarea,
+/* สไตล์ทั่วไปสำหรับทุก dropdown */
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+  appearance: none;
+  background-color: white;
+  color: #8E8B8B;
+}
+
+/* สไตล์เฉพาะสำหรับ dropdown ที่มีลูกศร */
+.dropdown-with-arrow {
+  padding-right: 40px; /* เพิ่มพื้นที่ด้านขวาให้ลูกศร */
+  background: url('Chevron\ down.png') no-repeat right 10px center;
+  background-size: 15px; /* ขนาดลูกศร */
+}
+
+.popup-content button {
+  background-color: #DF00B1;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  /* ทำให้ปุ่มกว้างเท่ากับ container */
+  max-width: 300px;
+  /* กำหนดขนาดสูงสุด */
+  margin-bottom: 15px;
+  /* เพิ่มช่องว่างระหว่างปุ่ม */
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  /* เพิ่มช่องว่างระหว่างฟอร์ม */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.form-group:last-child {
+  margin-right: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+  /* ซ่อน checkbox เดิม */
+}
+
+input[type="checkbox"]+label img {
+  cursor: pointer;
+  /* ให้มี cursor แบบ pointer เมื่อ hover */
+}
+
+input[type="checkbox"]:checked+label img {
+  border: 2px solid #DF00B1;
+  /* ใส่กรอบให้กับรูปที่เลือก */
+}
+
+
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkbox-group label {
+  margin-left: 10px; /* เพิ่มช่องว่างระหว่าง checkbox กับ label */
+  white-space: nowrap; /* บังคับให้ข้อความอยู่ในบรรทัดเดียว */
+}
+
+.custom-checkbox {
+  display: none; /* ซ่อน checkbox ดั้งเดิม */
+}
+
+.checkbox-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-wrap: wrap; /* ให้ checkbox ที่เหลือขยับขึ้นมาข้างกันถ้ามีที่ว่าง */
+  gap: 30px; /* ช่องว่างระหว่างคอลัมน์ */
+}
+
+.checkbox-column {
+  display: flex;
+  flex-direction: column;
+  width: 45%; /* กำหนดความกว้างให้ checkbox แต่ละกลุ่ม */
+}
+
+.custom-checkbox:checked + label .checkbox-icon {
+  content: url('Checkbox1.png'); /* แสดงรูปภาพ "ถูก" เมื่อ checkbox ถูกเลือก */
+}
+button.close-btn:first-of-type {
+  width: 100%;
+  /* ให้ปุ่มยาวเต็มความกว้าง */
+  padding: 8px 0;
+  background-color: #DF00B1;
+  /* สีพื้นหลัง */
+  color: #fff;
+  /* สีตัวอักษร */
+  border: none;
+  /* เอากรอบออก */
+  border-radius: 25px;
+  /* เพิ่มความโค้ง */
+  margin-top: 10px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  max-width: 500px;
+  /* เพิ่มความยาวของปุ่ม */
+  font-family: 'Kanit', sans-serif;
+}
+
+button#closePopupBtn2 {
+  background-color: transparent;
+  /* ทำให้พื้นหลังโปร่งใส */
+  color: #ffffff;
+  /* สีตัวอักษร */
+  font-size: 1rem;
+  border: none;
+  /* เอากรอบออก */
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-family: 'Kanit', sans-serif;
+}
+
+
+/** หน้า 2 */
+
+.blog2 {
+  position: relative;
+  height: 100vh;
+  /* ให้ความสูงเต็มหน้าจอ */
+  background-image: url('518e07f4f68da43fed838995ae7ea0a7.jpg');
+  /* ใส่รูปภาพที่ต้องการ */
+  background-size: cover;
+  /* ทำให้รูปครอบคลุมเต็มพื้นที่ */
+  background-position: center;
+  /* จัดตำแหน่งรูปให้อยู่ตรงกลาง */
+  background-repeat: no-repeat;
+  /* ป้องกันการทำซ้ำรูป */
+  overflow: hidden;
+}
+
+.hero2-con {
+  display: flex;
+  justify-content: center;
+  /* จัดให้อยู่กึ่งกลางแนวนอน */
+  align-items: center;
+  /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  text-align: center;
+  /* จัดข้อความให้อยู่กึ่งกลางในบรรทัด */
+  height: 100vh;
+  /* ตั้งความสูงให้เต็มหน้าจอ */
+}
+
+.hero2-info {
+  max-width: 800px;
+  /* จำกัดความกว้างของเนื้อหา */
+  margin: 0 auto;
+  /* จัดให้อยู่ตรงกลางในคอนเทนเนอร์ */
+  padding: 2rem;
+  color: #fff;
+}
+
+.hero2-info h1 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 4rem !important;
+  /* ขนาดตัวอักษรใหญ่ขึ้น */
+  font-weight: 400 !important;
+  /* ปรับน้ำหนักให้บาง */
+  color: #ffffff;
+}
+
+.hero2-info h3 {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem !important;
+  /* ขนาดตัวอักษรใหญ่ขึ้น */
+  font-weight: 500 !important;
+  /* ปรับน้ำหนักให้บาง */
+  color: #ffffff;
+  line-height: 1;
+  /* เพิ่มระยะห่างระหว่างบรรทัด */
+}
+
+
+.hero2-info p {
+  text-align: center;
+  /* จัดข้อความในบล็อกให้อยู่กึ่งกลาง */
+  margin: 1rem 0;
+}
+
+.hero2-info .hero2-btn {
+  display: inline-block;
+  background-color: #DF00B1;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  /* ขยายขนาดปุ่มด้วยการเพิ่ม padding */
+  border-radius: 18px;
+  text-decoration: none;
+}
+
+.imgarrow-right {
+  position: absolute;
+  right: 20px;
+  /* ระยะห่างจากขอบขวา */
+  bottom: 10px;
+  /* ระยะห่างจากขอบล่าง */
+  width: 25px;
+  /* ขนาดของลูกศร */
+  height: auto;
+}
+
+.hero5-1-btn {
+  display: inline-block;
+    background-color: #DF00B1;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 18px;
+    text-decoration: none;
+}
+
+#openPopupBtnFooter {
+  text-decoration: none !important;
+}
+
+
+
+  /* ซ่อนเมนูสำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
+}
+/* ปรับขนาดของวิดีโอหรือภาพให้พอดีกับหน้าจอมือถือ */
+.hero-img {
+    width: 100%;
+    margin: 0 auto;
+}
+.background-video {
+    width: 100%;
+    height: auto;
+}
+
+
+  nav {
+      padding: 1rem 2rem;
+      top: 0;
+      left: 0;
+      background-color: #000;
+      width: 100%; /* ให้ครอบคลุมความกว้างของหน้าจอ */
+      border-radius: 0;
+      z-index: 1000;
+      transform: translateX(0); /* เอา translateX ออกเพื่อให้อยู่ชิดขอบซ้าย */
+  }
+
+  .nav-con {
+      display: flex;
+      justify-content: flex-start; /* จัดเนื้อหาไปทางซ้าย */
+      align-items: center; /* ให้อยู่ตรงกลางแนวตั้ง */
+      padding-left: 1rem; /* เพิ่ม padding เพื่อขยับโลโก้ออกจากขอบซ้าย */
+      width: 100%;
+  }
+
+  .logo {
+      margin-left: 0px;
+      /* ขยับโลโก้ให้อยู่ห่างจากขอบซ้าย */
+  }
+
+  .menu {
+      display: none;
+      /* ซ่อนเมนู */
+      flex-direction: column;
+      background-color: #000;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      align-items: self-start;
+      line-height: 1.0; /* ปรับให้ใกล้กันมากขึ้น */
+      padding-top: 10px;
+      padding-bottom: 20px;
+  }
+
+  .menu li {
+      padding-left: 45px; /* ปรับขนาดตามความต้องการ */
+    }
+
+  .menu.active {
+      display: flex;
+      /* แสดงเมนูเมื่อคลิกไอคอน */
+  }
+
+
+  /* Hamburger icon */
+  .hamburger {
+      position: absolute;
+      right: 20px;
+      /* บังคับให้แฮมเบอร์เกอร์อยู่ชิดซ้าย */
+      top: 50%;
+      /* ปรับให้แฮมเบอร์เกอร์อยู่กึ่งกลางในแนวตั้ง */
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 25px;
+      cursor: pointer;
+  }
+
+  .hamburger span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background-color: #fff;
+      margin: 4px 0;
+      transition: all 0.3s ease-in-out;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* จัดเรียงเนื้อหาให้เป็นแนวตั้ง */
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*****************************รูปภาพ***************************************/
+
+
+  .seo-article {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.back-btn {
+  margin-bottom: 20px;
+  margin-top: 80px;
+  clear: both;
+  position: relative;
+  z-index: 10; /* กำหนดให้ปุ่มอยู่ด้านบนสุด */
+}
+
+.back-btn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.image-section {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.seo-main-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-content {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.article-content p {
+    font-weight: 400;
+    font-size: 0.9rem !important; /* ขนาดตัวอักษรเล็กลงสำหรับมือถือ */
+    line-height: 1.4 !important;
+}
+
+.article-content h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 8px !important;
+    color: #fff;
+    white-space: normal; /* อนุญาตให้ตัดขึ้นบรรทัดใหม่ */
+    word-wrap: break-word; /* ตัดคำถ้ายาวเกิน */
+}
+
+.article-body {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.share-icons-hidden {
+  display: none; /* ซ่อนโดยค่าเริ่มต้น */
+  position: absolute;
+  top: 100%; /* วางไอคอนย่อยให้ลงมาใต้ไอคอนหลัก */
+  left: -20px; /* ขยับให้ห่างจากขอบขวา */
+  background: #333;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเพื่อความสวยงาม */
+}
+
+.share-icons-hidden a {
+  display: inline-block;
+  margin: 5px;
+}
+
+/*****************************************การ์ด*******************************************/
+
+/** หน้า 6 การ์ด */
+.container6 {
+  background-color: #000;
+  height: 450vh;
+  /* ให้ความสูงเต็มหน้าจอ */
+  padding-top: 0px;
+  /* เว้นระยะห่างจากขอบบน 50px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 20px;
+  flex-direction: column;
+}
+
+.article-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+.view-all-btn {
+  font-family: 'Kanit', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero6-con {
+  display: flex;
+  flex-direction: column; /* เรียงการ์ดในแนวตั้ง */
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 0px; /* เพิ่ม padding เพื่อเว้นขอบ */
+}
+
+.card {
+  background-color: transparent;
+    border: 1px solid #808080;
+    color: #fff;
+    flex: 0 0 300px;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none;
+    text-decoration: none;
+    position: relative;
+    
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  display: block;
+  background-color: #e6007e;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* จัดสไลด์ */
+.carousel {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.carousel-items {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+/* ลูกศร */
+.carousel-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 50px;
+}
+
+.right-arrow {
+  position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    right: 50px;
+}
+
+/* ปุ่ม 3 ปุ่มข้างล่าง */
+.carousel-indicators {
+  position: absolute;
+  bottom: -50px;
+  /* ปรับตำแหน่งให้อยู่นอกกรอบการ์ด */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  gap: 5px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.imgarrow-right {
+  position: absolute;
+  right: 20px; /* ระยะห่างจากขอบขวา */
+  bottom: 10px; /* ระยะห่างจากขอบล่าง */
+  width: 25px; /* ขนาดของลูกศร */
+  height: auto;
+}
+
+/** footer */
+.footer {
+  background-color: #000;
+  /* พื้นหลังสีดำ */
+  padding-top: 20px;
+  padding-bottom: 80px;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: #fff;
+  /* สีตัวอักษรเป็นสีขาว */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: flex-start;
+  /* กระจายคอลัมน์ให้ห่างกัน */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* ทำให้ตอบสนองต่อหน้าจอขนาดเล็กได้ */
+}
+
+.footer .map-container,
+.footer .mail-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  /* เพิ่มระยะห่างเล็กน้อยระหว่างบรรทัด */
+}
+
+.footer .map-container img,
+.footer .mail-container img {
+  margin-right: 10px;
+  /* เพิ่มระยะห่างระหว่างไอคอนกับข้อความ */
+  width: 20px;
+  /* ขนาดของไอคอน */
+  height: auto;
+}
+
+.footer .mail-container a,
+.footer .map-container p {
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .mail-container a:hover {
+  text-decoration: underline;
+}
+
+.footer .social-icons a {
+  margin-right: 10px;
+}
+
+.footer .social-icons img {
+  width: 24px;
+  height: auto;
+}
+
+.footer-column1 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  text-align: left;
+}
+
+.footer-column1 h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column1 p {
+  text-align: left;
+}
+.footer-column1 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column1 a:hover {
+  text-decoration: underline;
+}
+
+
+
+.footer-column2 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  padding-left: 0px;
+}
+
+.footer-column2 h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column2 p,
+.footer-column2 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column2 a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 2; /* ระยะห่างระหว่างบรรทัด */
+}
+
+.footer-column2 a:hover {
+  text-decoration: underline;
+}
+
+
+
+.footer-column3 {
+  flex: 1;
+  margin: 0 20px;
+  min-width: 200px;
+  /* กำหนดขนาดขั้นต่ำของคอลัมน์ */
+  text-align: left;
+}
+
+.footer-column3 h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-column3 p,
+.footer-column3 ul {
+  margin-bottom: 20px;
+  font-size: 14px;
+  list-style-type: none;
+}
+
+.footer-column3 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-column3 a:hover {
+  text-decoration: underline;
+}
+
+.cta-btn {
+  background-color: #e6007e;
+  /* สีปุ่มเป็นสีชมพู */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 18px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Kanit', sans-serif;
+}
+
+.cta-btn:hover {
+  background-color: #d4006f;
+  /* เปลี่ยนสีเมื่อ hover */
+}
+
+.social-icons a {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #fff;
+}
+}
+
+/* สำหรับ iPad Mini และ iPad ขนาดกลาง (iPad Air, iPad 9th Gen, 10th Gen) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+      font-family: 'Kanit', sans-serif;
+      overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
+  }
+
+  .hamburger span {
+      display: block; /* แสดงแถบแฮมเบอร์เกอร์ */
+  }
+}
+
+/* สำหรับ iPad Pro 11-inch และ 12.9-inch */
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+  body {
+      font-family: 'Kanit', sans-serif;
+      overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
+  }
+
+  .hamburger span {
+      display: none; /* ซ่อนแถบแฮมเบอร์เกอร์สำหรับ iPad Pro */
+  }
+
+    
+  .menu li a {
+    font-size: 15px;
+}
+
+.menu li a img {
+  width: 20px; /* ปรับขนาดไอคอนตามที่ต้องการ */
+  margin-right: 3px; /* ระยะห่างระหว่างไอคอนกับข้อความ */
+}
+
+    .article-content h1 {
+      font-size: 2rem !important;
+      margin: 0;
+      color: #fff;
+      white-space: normal; /* พับบรรทัดเมื่อข้อความเกินขอบ */
+    }
+
+}

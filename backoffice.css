@@ -1,0 +1,367 @@
+/* General Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #f4f6f9;
+}
+
+.back-office-container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar img {
+    padding-bottom: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar-header {
+    font-size: 1.8em;
+    color: #007BFF;
+    margin-bottom: 1em;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.menu-item .icon {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background-color: #e9ecef;
+    color: #007BFF;
+}
+
+.sidebar-help {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar-help a {
+    color: #666;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+.content-section {
+    padding-top: 20px;
+    display: none;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+.content-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.content-section input[type="file"],
+.content-section input[type="text"],
+.content-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.content-section button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.content-section button:hover {
+    background-color: #0056b3;
+}
+
+/* ทำให้ section นี้ใช้ความกว้างเต็ม */
+.full-width-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 20px;  /* เพิ่ม padding เพื่อไม่ให้ติดขอบหน้าจอ */
+    box-sizing: border-box;
+}
+
+/* ปรับให้ตารางใช้พื้นที่เต็มภายใน section */
+.popup-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.popup-data-table th, .popup-data-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.popup-data-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* ปรับ main-content ให้แสดงผลเต็มพื้นที่ */
+.main-content {
+    flex: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Blog Section Specific */
+#blog-list {
+    margin-top: 20px;
+}
+
+#blog-list div {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#blog-list h4 {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+#blog-list p {
+    color: #666;
+}
+
+#blog-list button {
+    background-color: #d9534f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#blog-list button:hover {
+    background-color: #c9302c;
+}
+
+/* Highlight Active Section in Sidebar */
+.menu-item.active {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+.menu-item.active .icon {
+    color: #ffffff;
+}
+
+.content-section {
+    display: none;
+}
+
+#default-section {
+    display: block; /* แสดงเฉพาะหน้าเริ่มต้น */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Section Styling */
+.content-section2 {
+    padding-top: 20px;
+    display: none;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content-section2 h2 {
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    color: #333;
+    text-align: center;
+}
+
+.content-section2 label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.content-section2 input[type="file"],
+.content-section2 input[type="text"],
+.content-section2 textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.content-section2 button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.content-section2 button:hover {
+    background-color: #0056b3;
+}
+
+
+/* General Styling for Blog Sections */
+.blog-list {
+    margin-top: 20px;
+}
+
+.blog-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%; /* เพิ่มขนาดความกว้างเต็ม */
+    max-width: 800px; /* กำหนดขนาดสูงสุด */
+    margin: 0 auto; /* จัดกึ่งกลาง */
+    margin-top: 20px; /* ปรับระยะห่างจากด้านบน */
+}
+
+.blog-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.blog-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.blog-item input[type="text"],
+.blog-item input[type="file"],
+.blog-item textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.blog-item button {
+    padding: 10px 20px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.blog-item button:hover {
+    background-color: #c9302c;
+}
+
+/* Add New Blog Button Styling */
+#add-new-blog, #add-new-blog-section {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#add-new-blog:hover, #add-new-blog-section:hover {
+    background-color: #0056b3;
+}
+
+/* กำหนดความกว้างของคอลัมน์ URL */
+.popup-data-table td:nth-child(3), 
+.popup-data-table th:nth-child(3) {
+    max-width: 300px; /* ความกว้างที่ต้องการ เช่น 300px */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
