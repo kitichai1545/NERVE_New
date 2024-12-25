@@ -406,3 +406,99 @@ async function submitPopupForm() {
         alert("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้ กรุณาลองใหม่อีกครั้ง");
     }
 }
+
+
+
+
+
+function logout() {
+    // ลบ token ออกจาก localStorage
+    localStorage.removeItem('authToken');
+
+    // นำผู้ใช้ไปที่หน้า Login
+    window.location.href = 'Login.html';
+}
+
+function isTokenExpired(token) {
+    try {
+        const payload = JSON.parse(atob(token.split('.')[1])); // ถอดรหัส payload จาก JWT
+        const currentTime = Math.floor(Date.now() / 1000); // เวลาปัจจุบันในหน่วยวินาที
+        return payload.exp < currentTime; // ตรวจสอบว่า exp (Expiration Time) หมดอายุหรือยัง
+    } catch (e) {
+        console.error('Invalid token:', e);
+        return true; // ถ้า Token ผิดพลาด ถือว่าหมดอายุ
+    }
+}
+
+function uploadBackgroundVideo() {
+    const token = localStorage.getItem('authToken');
+
+    if (!token || isTokenExpired(token)) {
+        alert("Session หมดอายุ กรุณาเข้าสู่ระบบใหม่");
+        logout(); // เรียกฟังก์ชัน logout เพื่อนำผู้ใช้ไปหน้า Login
+        return;
+    }
+
+    const videoFileInput = document.getElementById('background-video');
+    const videoFile = videoFileInput ? videoFileInput.files[0] : null;
+
+    if (videoFile) {
+        const formData = new FormData();
+        formData.append('video', videoFile);
+
+        fetch('http://localhost:3000/upload-background-video', {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${token}` },
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) alert(data.message);
+                else console.error("Unexpected response:", data);
+            })
+            .catch(error => {
+                console.error("Error uploading video:", error);
+                alert("เกิดข้อผิดพลาดในการอัปโหลดวิดีโอ");
+            });
+    } else {
+        alert("กรุณาเลือกไฟล์วิดีโอ");
+    }
+}
+
+const jwt = require('jsonwebtoken');
+
+function generateToken(userId) {
+    return jwt.sign(
+        { userId },
+        'your-secret-key',
+        { expiresIn: '3d' } // หมดอายุใน 3 วัน
+    );
+}
+
+function setTokenExpirationTimeout(token) {
+    const payload = JSON.parse(atob(token.split('.')[1])); // ถอดรหัส Payload
+    const expirationTime = payload.exp * 1000; // แปลง Expiration Time เป็น milliseconds
+    const currentTime = Date.now();
+    const timeLeft = expirationTime - currentTime;
+
+    if (timeLeft > 0) {
+        setTimeout(() => {
+            alert("Session หมดอายุ กรุณาเข้าสู่ระบบใหม่");
+            logout(); // เรียกฟังก์ชัน logout
+        }, timeLeft);
+    } else {
+        logout(); // ถ้า Token หมดอายุแล้ว ให้ logout ทันที
+    }
+}
+
+// เรียกใช้ฟังก์ชันหลังจาก Login สำเร็จ
+const token = localStorage.getItem('authToken');
+if (token) {
+    setTokenExpirationTimeout(token);
+}
+
+function logout() {
+    localStorage.removeItem('authToken'); // ลบ Token
+    alert("คุณได้ออกจากระบบแล้ว");
+    window.location.href = 'Login.html'; // เปลี่ยนหน้าไป Login
+}
