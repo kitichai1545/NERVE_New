@@ -501,4 +501,5 @@ function logout() {
     localStorage.removeItem('authToken'); // ลบ Token
     alert("คุณได้ออกจากระบบแล้ว");
     window.location.href = 'Login.html'; // เปลี่ยนหน้าไป Login
+
 }

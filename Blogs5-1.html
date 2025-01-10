@@ -268,107 +268,95 @@
 
 
         <!-- Popup Structure แยกออกมา -->
-        <div id="popupForm" class="popup">
-            <div class="popup-content">
-                <img src="Logo (2).png" alt="" style="width: 120px; height: auto;"><br>
-                <h2>สร้างสรรค์ทุกโอกาสบนโลกดิจิตอล</h2>
-                <p>ให้เราเป็นส่วนหนึ่งในธุรกิจคุณ</p><br>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">ชื่อ*</label>
-                            <input type="text" id="name" name="name" placeholder="ระบุชื่อของคุณ" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">อีเมล*</label>
-                            <input type="email" id="email" name="email" placeholder="ระบุอีเมลของคุณ" required>
-                        </div>
-                    </div>
-    
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="url">URL Link*</label>
-                            <input type="url" id="url" name="url" placeholder="ระบุเว็บไซต์ หรือ ลิงก์ Facebook" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">เบอร์ติดต่อ*</label>
-                            <input type="tel" id="phone" name="phone" placeholder="ระบุเบอร์โทรศัพท์" required>
-                        </div>
-                    </div>
-    
+    <div id="popupForm" class="popup">
+        <div class="popup-content">
+            <img src="Logo (2).png" alt="" style="width: 120px; height: auto;"><br>
+            <h2>สร้างสรรค์ทุกโอกาสบนโลกดิจิตอล</h2>
+            <p>ให้เราเป็นส่วนหนึ่งในธุรกิจคุณ</p> <br>
+            <form>
+                <div class="form-row">
                     <div class="form-group">
-                        <label for="Budget">เลือกบัทเจ็ทรายเดือน</label>
-                        <select id="Budget" class="dropdown-with-arrow" name="budget" required>
-                            <option value="" disabled selected>เลือกบัทเจ็ทรายเดือน</option>
-                            <option value="30-50k">30,000 - 50,000 Baht</option>
-                            <option value="50-100k">50,000 - 100,000 Baht</option>
-                            <option value="100-300k">100,000 - 300,000 Baht</option>
-                            <option value="500-1M">500,000 - 1,000,000 Baht</option>
-                            <option value="more than 1M">More than 1,000,000 Baht</option>
-                        </select>
-                    </div><br>
-    
-                    <div class="form-group2">
-                        <label class="service-label">บริการ</label>
-                        <div class="checkbox-container">
-                            <div class="checkbox-column">
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="digitalMarketing" class="custom-checkbox" name="service"
-                                        value="Digital Marketing">
-                                    <label for="digitalMarketing">
-                                        <img src="Checkbox.png" alt="Checkbox for Digital Marketing" class="checkbox-icon">
-                                        Digital Marketing
-                                    </label>
-                                </div>
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="creativeBusiness" class="custom-checkbox" name="service"
-                                        value="Creative Business">
-                                    <label for="creativeBusiness">
-                                        <img src="Checkbox.png" alt="Checkbox for Creative Business" class="checkbox-icon">
-                                        Creative Business
-                                    </label>
-                                </div>
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="googleAds" class="custom-checkbox" name="service"
-                                        value="Google Ads">
-                                    <label for="googleAds">
-                                        <img src="Checkbox.png" alt="Checkbox for Google Ads" class="checkbox-icon"> Google
-                                        Ads
-                                    </label>
-                                </div>
+                        <label for="name">ชื่อ*</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อของคุณ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">อีเมล*</label>
+                        <input type="email" id="email" name="email" placeholder="ระบุอีเมลของคุณ" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="url">URL Link*</label>
+                        <input type="url" id="url" name="url" placeholder="ระบุเว็บไซต์ หรือ ลิงก์ Facebook" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">เบอร์ติดต่อ*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="ระบุเบอร์โทรศัพท์" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="Budget">เลือกบัทเจ็ทรายเดือน</label>
+                    <select id="Budget" class="dropdown-with-arrow" name="Budget" required>
+                        <option value="" disabled selected>เลือกบัทเจ็ทรายเดือน</option>
+                        <option value="30-50k">30,000 - 50,000 Baht</option>
+                        <option value="50-100k">50,000 - 100,000 Baht</option>
+                        <option value="100-300k">100,000 - 300,000 Baht</option>
+                        <option value="500-1M">500,000 - 1,000,000 Baht</option>
+                        <option value="more than 1M">More than 1,000,000 Baht</option>
+                    </select>
+                </div><br>
+
+                <div class="form-group2">
+                    <label class="service-label">บริการ</label>
+                    <div class="checkbox-container">
+                        <div class="checkbox-column">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="digitalMarketing" class="custom-checkbox">
+                                <label for="digitalMarketing">
+                                    <img src="Checkbox.png" alt="Checkbox for Digital Marketing" class="checkbox-icon">
+                                    Digital Marketing
+                                </label>
                             </div>
-                            <div class="checkbox-column">
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="seo" class="custom-checkbox" name="service" value="SEO">
-                                    <label for="seo">
-                                        <img src="Checkbox.png" alt="Checkbox for SEO" class="checkbox-icon"> SEO
-                                    </label>
-                                </div>
-                                <div class="checkbox-group">
-                                    <input type="checkbox" id="multimediaProduction" class="custom-checkbox" name="service"
-                                        value="Multimedia Production">
-                                    <label for="multimediaProduction">
-                                        <img src="Checkbox.png" alt="Checkbox for Multimedia Production"
-                                            class="checkbox-icon"> Multimedia Production
-                                    </label>
-                                </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="creativeBusiness" class="custom-checkbox">
+                                <label for="creativeBusiness">
+                                    <img src="Checkbox.png" alt="Checkbox for Creative Business" class="checkbox-icon">
+                                    Creative Business
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="googleAds" class="custom-checkbox">
+                                <label for="googleAds">
+                                    <img src="Checkbox.png" alt="Checkbox for Google Ads" class="checkbox-icon"> Google
+                                    Ads
+                                </label>
+                            </div>
+                        </div>
+                        <div class="checkbox-column">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="seo" class="custom-checkbox">
+                                <label for="seo">
+                                    <img src="Checkbox.png" alt="Checkbox for SEO" class="checkbox-icon"> SEO
+                                </label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="multimediaProduction" class="custom-checkbox">
+                                <label for="multimediaProduction">
+                                    <img src="Checkbox.png" alt="Checkbox for Multimedia Production"
+                                        class="checkbox-icon"> Multimedia Production
+                                </label>
                             </div>
                         </div>
                     </div>
-    
-                    <!-- ปุ่มส่งข้อมูลแบบ type="button" -->
-                    <button type="button" id="submitPopupBtn" class="close-btn">ร่วมงานกับเรา</button>
-                    <!-- ปุ่มปิด popup -->
-                    <button type="button" id="closePopupBtn2" class="close-btn">ปิด</button>
-    
-                    <!-- ส่วนแสดงข้อความสำเร็จ -->
-                    <div id="successMessage" style="display: none; color: green; margin-top: 10px;">
-                        กรอกข้อมูลสำเร็จ! ขอบคุณที่ร่วมงานกับเรา
-                    </div>
-    
-                </form>
-            </div>
+                </div>
+
+                <button type="submit" class="close-btn">ร่วมงานกับเรา</button>
+                <button type="button" id="closePopupBtn2" class="close-btn">ปิด</button>
+            </form>
         </div>
+    </div>
 
         <footer class="footer">
             <div class="footer-container">
