@@ -1,0 +1,79 @@
+/* รีเซ็ต CSS เบื้องต้น */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* รูปแบบพื้นฐาน */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background-color: #4a4a4a;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.main-title {
+    font-size: 2.5em;
+}
+
+/* Main Content */
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #4a4a4a;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* List */
+.list {
+    margin-left: 20px;
+    list-style-type: disc;
+    font-size: 0.95em;
+}
+
+.list li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    background: #4a4a4a;
+    color: white;
+    font-size: 0.9em;
+    border-radius: 5px;
+}

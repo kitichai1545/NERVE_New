@@ -28,24 +28,23 @@ if (closeBtn) {
 }
 
 // ฟังก์ชันสำหรับส่งข้อมูลจาก popup ไปยัง API
-async function submitPopupForm() {
-    // รับค่าจากฟอร์มใน popup
+async function submitPopupForm(event) {
+    event.preventDefault(); // ป้องกันการรีเฟรชหน้า
+
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const url = document.getElementById('url').value;
     const phone = document.getElementById('phone').value;
     const budget = document.getElementById('Budget').value;
     const services = Array.from(document.querySelectorAll('input[name="service"]:checked'))
-                        .map(checkbox => checkbox.value);
+    .map(checkbox => checkbox.value);
 
-    // ตรวจสอบว่าฟิลด์ทั้งหมดถูกกรอกครบถ้วน
     if (!name || !email || !url || !phone || !budget || services.length === 0) {
         alert("กรุณากรอกข้อมูลให้ครบทุกช่อง");
         return;
     }
 
     try {
-        // ส่งข้อมูลไปยัง API ของ Backend
         const response = await fetch('http://localhost:3000/api/save-popup-data', {
             method: 'POST',
             headers: {
@@ -57,32 +56,28 @@ async function submitPopupForm() {
                 url,
                 phone,
                 budget,
-                serve: services.join(', '),
+                serve: services.join(', ')
             }),
         });
 
         if (response.ok) {
             const data = await response.json();
-            console.log('Success:', data);
-
-            // แสดงข้อความสำเร็จ
-            const successMessage = document.getElementById("successMessage");
-            successMessage.style.display = "block"; // แสดงข้อความสำเร็จ
-            document.getElementById("submitPopupBtn").style.display = "none"; // ซ่อนปุ่มส่ง
+            console.log('Response from server:', data);
+            alert("ข้อมูลถูกส่งเรียบร้อยแล้ว");
+            location.reload(); // รีเฟรชหน้า
         } else {
-            alert("เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง");
+            const errorData = await response.json();
+            console.error('Server Error:', errorData);
+            alert("เกิดข้อผิดพลาดในการส่งข้อมูล");
         }
     } catch (error) {
-        console.error('Error:', error);
-        alert("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้ กรุณาลองใหม่อีกครั้ง");
+        console.error('Error connecting to server:', error);
+        alert("ไม่สามารถเชื่อมต่อเซิร์ฟเวอร์ได้ กรุณาลองใหม่");
     }
 }
 
-// เชื่อมโยงฟังก์ชันส่งข้อมูลกับปุ่มส่งข้อมูลใน popup
+// เชื่อมโยงปุ่มส่งข้อมูลใน popup
 const submitBtn = document.getElementById("submitPopupBtn");
 if (submitBtn) {
-    submitBtn.addEventListener("click", (event) => {
-        event.preventDefault(); // ป้องกันการรีเฟรชหน้า
-        submitPopupForm(); // เรียกฟังก์ชันส่งข้อมูล
-    });
+    submitBtn.addEventListener("click", submitPopupForm);
 }

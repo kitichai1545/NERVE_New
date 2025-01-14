@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs'); // เพิ่ม: ใช้สำหรับการจัดการไฟล์ JSON
 const app = express();
 const cors = require('cors');
 const multer = require('multer');
@@ -12,6 +13,26 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 app.use(express.static(path.join(__dirname)));
+
+// เพิ่ม: กำหนดเส้นทางไฟล์ JSON สำหรับเก็บข้อมูล popupData
+const dataFilePath = path.join(__dirname, 'popupData.json');
+
+// เพิ่ม: ฟังก์ชันสำหรับโหลดข้อมูลจากไฟล์ JSON
+function loadPopupData() {
+    if (fs.existsSync(dataFilePath)) {
+        const rawData = fs.readFileSync(dataFilePath, 'utf8');
+        return JSON.parse(rawData);
+    }
+    return []; // คืนค่า array ว่างถ้าไฟล์ยังไม่มีอยู่
+}
+
+// เพิ่ม: ฟังก์ชันสำหรับบันทึกข้อมูลลงไฟล์ JSON
+function savePopupData(data) {
+    fs.writeFileSync(dataFilePath, JSON.stringify(data, null, 2));
+}
+
+// แก้ไข: โหลดข้อมูล popupData จากไฟล์ JSON แทน array ว่าง
+const popupData = loadPopupData();
 
 // Route สำหรับส่งไฟล์ HTML
 app.get('/Login.html', (req, res) => {
@@ -40,20 +61,21 @@ app.post('/login', (req, res) => {
     }
 });
 
-// สร้าง array เก็บข้อมูล popup
-const popupData = [];
-
+// แก้ไข: เพิ่มการบันทึกข้อมูลลงไฟล์ JSON ใน endpoint /api/save-popup-data
 app.post('/api/save-popup-data', (req, res) => {
     const { name, email, url, phone, budget, serve } = req.body;
-    const date = new Date().toLocaleDateString(); // เก็บวันที่
-    console.log("Received Data:", { name, email, url, phone, budget, serve, date }); // แสดงข้อมูลที่รับมา
+    const date = new Date().toLocaleDateString();
 
-    // ส่งข้อมูลพร้อมวันที่ไปยัง popupData
+    console.log("Received Data:", { name, email, url, phone, budget, serve, date });
+
+    // เพิ่มข้อมูลใหม่ใน array
     popupData.push({ name, email, url, phone, budget, serve, date });
+
+    // บันทึกข้อมูลลงไฟล์ JSON
+    savePopupData(popupData);
 
     res.json({ message: 'Data saved successfully!' });
 });
-
 
 // Endpoint สำหรับดึงข้อมูล popup ทั้งหมดใน array
 app.get('/api/get-popup-data', (req, res) => {
@@ -63,25 +85,16 @@ app.get('/api/get-popup-data', (req, res) => {
 // กำหนดการจัดเก็บไฟล์ที่อัปโหลด
 const upload = multer({ dest: 'uploads/' });
 
-// Endpoint สำหรับอัปโหลดวิดีโอพื้นหลัง
 app.post('/upload-background-video', upload.single('video'), (req, res) => {
     res.json({ message: 'Background video uploaded successfully!', file: req.file });
 });
 
-// Endpoint สำหรับอัปโหลดภาพพื้นหลัง
 app.post('/upload-background-image', upload.single('image'), (req, res) => {
     res.json({ message: 'Background image uploaded successfully!', file: req.file });
 });
 
-// Endpoint สำหรับอัปโหลดเนื้อหาวิดีโอ
 app.post('/upload-content-video', upload.single('video'), (req, res) => {
     res.json({ message: 'Content video uploaded successfully!', file: req.file });
-});
-
-// Endpoint สำหรับดึงเนื้อหาที่มีอยู่ (ตัวอย่าง)
-app.get('/get-content', (req, res) => {
-    const existingContent = "นี่คือเนื้อหาที่มีอยู่ที่ต้องการแก้ไข";
-    res.json({ content: existingContent });
 });
 
 const PORT = 3000;

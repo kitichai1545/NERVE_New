@@ -359,6 +359,7 @@ document.getElementById("add-new-blog").onclick = function () {
 // ใน backoffice.js
 async function submitPopupForm() {
     // รับค่าจากฟอร์มใน popup
+    console.log("submitPopupForm called"); // Debug
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const url = document.getElementById('url').value;

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style5-3.css">
     <link rel="stylesheet" href="style5.css">
-    <title>Document</title>
+    <title>NERVE</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -39,9 +39,56 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Favicon สำหรับ Desktop -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+
 </head>
 
 <body>
+
+    <div id="cookie-banner" style="
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+">
+    <p style="margin: 0;">
+        เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ 
+        <a href="/cookie-policy.html" style="color: #808080; text-decoration: underline;"><a href="privacy policy.html" target="_blank">อ่านเพิ่มเติม</a>
+    </p>
+    <button id="accept-cookies" style="
+        background: #808080;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    ">ยอมรับ</button>
+</div>
+
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        document.cookie = "cookiesAccepted=true; path=/; max-age=" + (60 * 60 * 24 * 30);
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+</script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3ZBPFS"
@@ -405,6 +452,11 @@
                     </div>
                 </div>
 
+                <!-- เพิ่มข้อความและลิงก์ Privacy Policy -->
+    <p style="font-size: 12px; color: #666;">
+        การส่งข้อมูลนี้แสดงว่าคุณยอมรับ <a href="privacy policy.html" target="_blank" style="color: #007BFF; text-decoration: underline;">นโยบายความเป็นส่วนตัว</a>
+    </p>
+
                 <button type="submit" class="close-btn">ร่วมงานกับเรา</button>
                 <button type="button" id="closePopupBtn2" class="close-btn">ปิด</button>
             </form>
@@ -469,7 +521,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 NERVE. All rights reserved.</p>
+            <p>© 2024 NERVE. All rights reserved. | <a href="privacy policy.html" target="_blank">นโยบายความเป็นส่วนตัว</a></p>
         </div>
     </footer>
 
@@ -486,6 +538,7 @@
     <script src="Article slide.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
     <script src="shereicon.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
     <script src="alternate.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
+    <script src="cookie website policy.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
 </body>
 
 </html>

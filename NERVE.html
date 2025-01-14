@@ -11,38 +11,92 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-KW3ZBPFS');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KW3ZBPFS');</script>
     <!-- End Google Tag Manager -->
 
     <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '589400743500749');
-    fbq('track', 'PageView');
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '589400743500749');
+        fbq('track', 'PageView');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=589400743500749&ev=PageView&noscript=1"
-    /></noscript>
+            src="https://www.facebook.com/tr?id=589400743500749&ev=PageView&noscript=1" /></noscript>
     <!-- End Meta Pixel Code -->
+
+    <!-- Favicon สำหรับ Desktop -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./favicon_io/android-chrome-512x512.png">
+
+    <!-- Web Manifest -->
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
 
 </head>
 
 <body>
-        <!-- Google Tag Manager (noscript) -->
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3ZBPFS"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+
+    <div id="cookie-banner" style="
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+">
+        <p style="margin: 0;">
+            เราใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ
+            <a href="/cookie-policy.html" style="color: #808080; text-decoration: underline;"><a
+                    href="privacy policy.html" target="_blank">อ่านเพิ่มเติม</a>
+        </p>
+        <button id="accept-cookies" style="
+        background: #808080;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    ">ยอมรับ</button>
+    </div>
+
+    <script>
+        document.getElementById('accept-cookies').addEventListener('click', function () {
+            document.cookie = "cookiesAccepted=true; path=/; max-age=" + (60 * 60 * 24 * 30);
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW3ZBPFS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <nav>
         <div class="container">
@@ -114,7 +168,8 @@
             <img src="Logo (2).png" alt="" style="width: 120px; height: auto;"><br>
             <h2>สร้างสรรค์ทุกโอกาสบนโลกดิจิตอล</h2>
             <p>ให้เราเป็นส่วนหนึ่งในธุรกิจคุณ</p> <br>
-            <form>
+
+            <form id="popupFormContent">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">ชื่อ*</label>
@@ -154,21 +209,21 @@
                     <div class="checkbox-container">
                         <div class="checkbox-column">
                             <div class="checkbox-group">
-                                <input type="checkbox" id="digitalMarketing" class="custom-checkbox">
+                                <input type="checkbox" id="digitalMarketing" class="custom-checkbox" name="service" value="Digital Marketing">
                                 <label for="digitalMarketing">
                                     <img src="Checkbox.png" alt="Checkbox for Digital Marketing" class="checkbox-icon">
                                     Digital Marketing
                                 </label>
                             </div>
                             <div class="checkbox-group">
-                                <input type="checkbox" id="creativeBusiness" class="custom-checkbox">
+                                <input type="checkbox" id="creativeBusiness" class="custom-checkbox" name="service" value="Creative Business">
                                 <label for="creativeBusiness">
                                     <img src="Checkbox.png" alt="Checkbox for Creative Business" class="checkbox-icon">
                                     Creative Business
                                 </label>
                             </div>
                             <div class="checkbox-group">
-                                <input type="checkbox" id="googleAds" class="custom-checkbox">
+                                <input type="checkbox" id="googleAds" class="custom-checkbox" name="service" value="Google Ads">
                                 <label for="googleAds">
                                     <img src="Checkbox.png" alt="Checkbox for Google Ads" class="checkbox-icon"> Google
                                     Ads
@@ -177,15 +232,15 @@
                         </div>
                         <div class="checkbox-column">
                             <div class="checkbox-group">
-                                <input type="checkbox" id="seo" class="custom-checkbox">
+                                <input type="checkbox" id="seo" class="custom-checkbox" name="service" value="SEO">
                                 <label for="seo">
                                     <img src="Checkbox.png" alt="Checkbox for SEO" class="checkbox-icon"> SEO
                                 </label>
                             </div>
                             <div class="checkbox-group">
-                                <input type="checkbox" id="multimediaProduction" class="custom-checkbox">
+                                <input type="checkbox" id="multimediaProduction" class="custom-checkbox" name="service" value="Multimedia Production">
                                 <label for="multimediaProduction">
-                                    <img src="Checkbox.png" alt="Checkbox for Multimedia Production"
+                                    <img src="Checkbox.png" alt="Checkbox for Multimedia Production" 
                                         class="checkbox-icon"> Multimedia Production
                                 </label>
                             </div>
@@ -193,7 +248,13 @@
                     </div>
                 </div>
 
-                <button type="submit" class="close-btn">ร่วมงานกับเรา</button>
+                <!-- เพิ่มข้อความและลิงก์ Privacy Policy -->
+                <p style="font-size: 12px; color: #666;">
+                    การส่งข้อมูลนี้แสดงว่าคุณยอมรับ <a href="privacy policy.html" target="_blank"
+                        style="color: #007BFF; text-decoration: underline;">นโยบายความเป็นส่วนตัว</a>
+                </p>
+
+                <button type="button" id="submitPopupBtn" class="close-btn">ร่วมงานกับเรา</button>
                 <button type="button" id="closePopupBtn2" class="close-btn">ปิด</button>
             </form>
         </div>
@@ -496,7 +557,7 @@
 
                 <p>4/27 NUANCHAN 56 NUANCHAN, BUENGKUM BANGKOK 10230 THAILAND</p>
                 <p>
-                    <a href="tel:0817214455">081-721-4455</a>, 
+                    <a href="tel:0817214455">081-721-4455</a>,
                     <a href="tel:0809196514">080-919-6514</a>
                 </p>
 
@@ -523,7 +584,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 NERVE. All rights reserved.</p>
+            <p>© 2024 NERVE. All rights reserved. | <a href="privacy policy.html"
+                    target="_blank">นโยบายความเป็นส่วนตัว</a></p>
         </div>
     </footer>
 
@@ -543,6 +605,7 @@
     <script src="Article slide.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
     <script src="VDOmoblie.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
     <script src="alternate.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
+    <script src="cookie website policy.js"></script> <!-- เชื่อมโยงไฟล์ JavaScript -->
 
 
 </body>
